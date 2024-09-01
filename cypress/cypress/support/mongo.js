@@ -1,13 +1,12 @@
-const {mongoClient} = require('mongodb');
+const {MongoClient} = require('mongodb');
 
 // conexão db
-const mongoUri = 'mongodb+srv://mayall01:<mayall01>@cluster0.mbuha.mongodb.net/markdb?retryWrites=true&w=majority&appName=Cluster0'
+const mongoUri = 'mongodb+srv://mayall01:mayall01@cluster0.mbuha.mongodb.net/markdb?retryWrites=true&w=majority&appName=Cluster0';
 
 const client = new MongoClient(mongoUri)
 
 async function connect() {
    await client.connect()
-
     return client.db('markdb')
 
 

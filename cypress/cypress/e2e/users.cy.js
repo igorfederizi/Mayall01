@@ -7,6 +7,8 @@ describe('POST /users',() => {
       password: '123456'
     }
 
+    cy.task('deleteUser', user.email)
+
     cy.request({
       url: 'users',
       method: 'POST',
@@ -14,6 +16,7 @@ describe('POST /users',() => {
       failOnStatusCode: false
     }).then(response => {
       expect(response.status).to.eq(200)
+      cy.log(JSON.stringify(response.body))
     })
 
 
