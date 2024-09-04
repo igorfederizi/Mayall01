@@ -12,6 +12,7 @@
     "cypress": "^13.14.1"
   },
   "devDependencies": {
+    "cypress-plugin-api": "^2.11.2",
     "mongodb": "^6.8.0"
   }
 }
